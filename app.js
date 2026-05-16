@@ -1,7 +1,10 @@
 const express = require('express');
 const app = express();
-app.get('/', (req, res) => {
-    res.send('Hello from nodejs!')
-})
+const items = require('./routes/item');
+
+// app.get('/', (req, res) => {
+//     res.send('Hello from nodejs!')
+// })
+app.use('/api/v1', items);
 
 module.exports = app
