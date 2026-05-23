@@ -18,7 +18,7 @@ exports.createOrder = (req, res, next) => {
     //         }
     //     ]
     // ]
-    console.log(req.body,)
+    // console.log(req.body,)
     const { cart, user } = req.body;
     console.log(cart, user)
 

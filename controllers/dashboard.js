@@ -4,12 +4,13 @@ exports.addressChart = (req, res) => {
     const sql = 'SELECT count(addressline) as total, addressline FROM customer GROUP BY addressline ORDER BY total DESC';
     try {
         connection.query(sql, (err, rows, fields) => {
+            // console.log(rows)
             if (err instanceof Error) {
                 console.log(err);
                 return;
             }
             return res.status(200).json({
-                rows,
+                rows
             })
         });
     } catch (error) {
